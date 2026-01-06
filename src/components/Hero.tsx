@@ -42,7 +42,7 @@ export function Hero({ darkMode }: HeroProps) {
 
         <div className="flex gap-6 justify-center">
           <a
-            href="https://www.linkedin.com/in/matheusmunuera"
+            href="https://www.linkedin.com/in/matheus-munuera-ueti-1721892b7/"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-3 rounded-full transition-colors duration-300 ${darkMode ? 'hover:bg-[#2a2a2a]' : 'hover:bg-[#F5F0E6]'}`}
@@ -51,7 +51,7 @@ export function Hero({ darkMode }: HeroProps) {
             <Linkedin className={`w-6 h-6 ${darkMode ? 'text-[#C3A686]' : 'text-[#B99C7A]'}`} />
           </a>
           <a
-            href="https://github.com/matheusmunuera"
+            href="https://github.com/Matheus-Ueti"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-3 rounded-full transition-colors duration-300 ${darkMode ? 'hover:bg-[#2a2a2a]' : 'hover:bg-[#F5F0E6]'}`}

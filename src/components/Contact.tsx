@@ -9,8 +9,12 @@ export function Contact({ darkMode }: ContactProps) {
   const [ref, isVisible] = useScrollAnimation();
 
   const handleDownloadCV = () => {
-    // Placeholder para download do currículo
-    alert('Funcionalidade de download do currículo será implementada aqui.');
+    const link = document.createElement('a');
+    link.href = '/curriculo.doc';
+    link.download = 'Matheus_Munuera_Curriculo.doc';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -63,7 +67,7 @@ export function Contact({ darkMode }: ContactProps) {
             style={{ fontFamily: 'Lato, sans-serif' }}
           >
             <Download className="w-5 h-5" />
-            Baixar meu Currículo (.pdf)
+            Baixar meu Currículo (.doc)
           </button>
         </div>
       </div>
