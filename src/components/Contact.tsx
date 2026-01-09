@@ -10,8 +10,8 @@ export function Contact({ darkMode }: ContactProps) {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/curriculo.doc';
-    link.download = 'Matheus_Munuera_Curriculo.doc';
+    link.href = '/34262771.docx';
+    link.download = 'Matheus_Munuera_Curriculo.docx';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

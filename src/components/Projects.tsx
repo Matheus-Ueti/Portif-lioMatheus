@@ -6,6 +6,7 @@ interface Project {
   tags: string[];
   description: string;
   link?: string;
+  image?: string;
 }
 
 const projects: Project[] = [
@@ -13,31 +14,36 @@ const projects: Project[] = [
     title: 'NEXTJOB',
     tags: ['Firebase', 'TypeScript', 'React'],
     description: 'Aplicativo com IA implementada que ajuda profissionais de TI a receberem feedback detalhado e personalizado do currículo.',
-    link: '#'
+    link: '#',
+    image: '/src/assets/projects/nextjob.png'
   },
   {
     title: 'EcoSafe',
     tags: ['Firebase', 'TypeScript', 'React', 'Java', 'Spring Boot'],
     description: 'Aplicativo de gerenciamento ambiental focado em monitoramento e controle de práticas sustentáveis.',
-    link: '#'
+    link: '#',
+    image: '/src/assets/projects/ecosafe.png'
   },
   {
     title: 'Zoog (Mottu)',
     tags: ['TypeScript', 'React'],
     description: 'Aplicativo em contribuição com a Mottu para gerenciamento eficiente de motos nos pátios da empresa.',
-    link: '#'
+    link: '#',
+    image: '/src/assets/projects/zoog.png'
   },
   {
     title: 'Landing Page - Advogada Izandra',
     tags: ['HTML', 'CSS', 'JavaScript'],
     description: 'Landing page profissional e moderna para apresentação de serviços jurídicos.',
-    link: '#'
+    link: '#',
+    image: '/src/assets/projects/advogada-izandra.png'
   },
   {
     title: 'Landing Page - Dr. Caio Munuera Ueti',
     tags: ['HTML', 'CSS', 'JavaScript'],
     description: 'Landing page para cirurgião bucomaxilofacial com design elegante e responsivo.',
-    link: '#'
+    link: '#',
+    image: '/src/assets/projects/dr-caio.png'
   }
 ];
 
@@ -60,43 +66,43 @@ export function Projects({ darkMode }: ProjectsProps) {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 ${
+                className={`rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 ${
                   darkMode ? 'bg-[#2a2a2a]' : 'bg-white'
                 } ${index >= 3 ? 'md:col-span-1' : ''}`}
                 style={{
                   transitionDelay: `${index * 100}ms`
                 }}
               >
-                <h3 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-[#333333]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  {project.title}
-                </h3>
+                <div className="p-6">
+                  <h3 className={`text-xl font-semibold mb-2 ${darkMode ? 'text-white' : 'text-[#333333]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                    {project.title}
+                  </h3>
+                  <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-[#333333]'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className={`px-3 py-1 rounded-full text-sm ${darkMode ? 'bg-[#C3A686]/20 text-[#C3A686]' : 'bg-[#F5F0E6] text-[#6D5D4B]'}`}
+                        style={{ fontFamily: 'Lato, sans-serif' }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
               
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className={`px-3 py-1 rounded-full text-sm ${darkMode ? 'bg-[#C3A686]/20 text-[#C3A686]' : 'bg-[#F5F0E6] text-[#6D5D4B]'}`}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      className={`inline-flex items-center gap-2 transition-colors duration-300 ${darkMode ? 'text-[#C3A686] hover:text-[#B99C7A]' : 'text-[#B99C7A] hover:text-[#A68B6A]'}`}
                       style={{ fontFamily: 'Lato, sans-serif' }}
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      Ver no GitHub
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
-              
-                <p className={`text-[16px] mb-6 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-[#333333]'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
-                  {project.description}
-                </p>
-              
-                {project.link && (
-                  <a
-                    href={project.link}
-                    className={`inline-flex items-center gap-2 transition-colors duration-300 ${darkMode ? 'text-[#C3A686] hover:text-[#B99C7A]' : 'text-[#B99C7A] hover:text-[#A68B6A]'}`}
-                    style={{ fontFamily: 'Lato, sans-serif' }}
-                  >
-                    Ver no GitHub
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
               </div>
             ))}
           </div>

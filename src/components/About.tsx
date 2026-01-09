@@ -1,5 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import profileImage from 'figma:asset/0986cca617f6b8eaa423342b4d72ef8a7d302cdb.png';
+import profileImage from '../assets/caf8cbf5-39bc-453e-ad5a-417f45abbf5a.jpeg';
 
 interface AboutProps {
   darkMode: boolean;
