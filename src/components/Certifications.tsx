@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { translations, Language } from '../translations';
 import certOracle from 'figma:asset/a8762439858a819ca8b11a84426676a0a8e44284.png';
 import certSocial from 'figma:asset/7b34a4a5c29f2f20590114481bf599cddd9c6167.png';
 import certJava from 'figma:asset/93b3e5e20854df09d028a1fd1a9d5509b3115e8a.png';
@@ -55,18 +56,20 @@ const certifications: Certification[] = [
 
 interface CertificationsProps {
   darkMode: boolean;
+  language: Language;
 }
 
-export function Certifications({ darkMode }: CertificationsProps) {
+export function Certifications({ darkMode, language }: CertificationsProps) {
   const [ref, isVisible] = useScrollAnimation();
-  const [selectedCert, setSelectedCert] = useState<string | null>(null);
+  const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
+  const t = translations[language].certifications;
 
   return (
     <section id="certificacoes" ref={ref} className={`py-20 px-6 transition-colors duration-300 ${darkMode ? 'bg-[#1a1a1a]' : 'bg-white'}`}>
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className={`text-[32px] font-semibold mb-12 text-center ${darkMode ? 'text-[#C3A686]' : 'text-[#6D5D4B]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            Certificações
+            {t.title}
           </h2>
         
           <div className="grid md:grid-cols-3 gap-8">

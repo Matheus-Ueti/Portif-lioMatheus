@@ -1,19 +1,22 @@
 import { GraduationCap } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { translations, Language } from '../translations';
 
 interface EducationProps {
   darkMode: boolean;
+  language: Language;
 }
 
-export function Education({ darkMode }: EducationProps) {
+export function Education({ darkMode, language }: EducationProps) {
   const [ref, isVisible] = useScrollAnimation();
+  const t = translations[language].education;
 
   return (
     <section id="formacao" ref={ref} className={`py-20 px-6 transition-colors duration-300 ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#F5F0E6]'}`}>
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className={`text-[32px] font-semibold mb-12 text-center ${darkMode ? 'text-[#C3A686]' : 'text-[#6D5D4B]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            Formação
+            {t.title}
           </h2>
         
           <div className="max-w-3xl mx-auto">
@@ -30,13 +33,13 @@ export function Education({ darkMode }: EducationProps) {
                 
                   <div className="flex-1">
                     <h3 className={`text-xl font-semibold mb-2 ${darkMode ? 'text-white' : 'text-[#333333]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                      Análise e Desenvolvimento de Sistemas
+                      {t.degree1}
                     </h3>
                     <p className={`font-semibold mb-2 ${darkMode ? 'text-[#C3A686]' : 'text-[#B99C7A]'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
-                      FIAP
+                      {t.institution1}
                     </p>
                     <p className={darkMode ? 'text-gray-300' : 'text-[#333333]'} style={{ fontFamily: 'Lato, sans-serif' }}>
-                      Concluído em <span className="font-semibold">12/2025</span>
+                      {t.period1}
                     </p>
                   </div>
                 </div>

@@ -1,12 +1,15 @@
 import { Mail, Phone, Download } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { translations, Language } from '../translations';
 
 interface ContactProps {
   darkMode: boolean;
+  language: Language;
 }
 
-export function Contact({ darkMode }: ContactProps) {
+export function Contact({ darkMode, language }: ContactProps) {
   const [ref, isVisible] = useScrollAnimation();
+  const t = translations[language].contact;
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
@@ -22,11 +25,11 @@ export function Contact({ darkMode }: ContactProps) {
       <div className="max-w-4xl mx-auto text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className={`text-[32px] font-semibold mb-6 ${darkMode ? 'text-[#C3A686]' : 'text-[#6D5D4B]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            Vamos Conversar?
+            {t.title}
           </h2>
         
           <p className={`text-[16px] mb-12 max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-[#333333]'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
-            Estou aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato.
+            {t.description}
           </p>
         
           <div className="grid md:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
@@ -37,7 +40,7 @@ export function Contact({ darkMode }: ContactProps) {
               <Mail className={`w-6 h-6 transition-colors duration-300 ${darkMode ? 'text-[#C3A686] group-hover:text-[#0a0a0a]' : 'text-[#B99C7A] group-hover:text-white'}`} />
               <div className="text-left">
                 <p className={`text-sm transition-colors duration-300 ${darkMode ? 'text-gray-400 group-hover:text-[#0a0a0a]/80' : 'text-[#6D5D4B] group-hover:text-white/80'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
-                  E-mail
+                  {t.email}
                 </p>
                 <p className={`transition-colors duration-300 ${darkMode ? 'text-white group-hover:text-[#0a0a0a]' : 'text-[#333333] group-hover:text-white'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
                   matheusueti@gmail.com
@@ -52,7 +55,7 @@ export function Contact({ darkMode }: ContactProps) {
               <Phone className={`w-6 h-6 transition-colors duration-300 ${darkMode ? 'text-[#C3A686] group-hover:text-[#0a0a0a]' : 'text-[#B99C7A] group-hover:text-white'}`} />
               <div className="text-left">
                 <p className={`text-sm transition-colors duration-300 ${darkMode ? 'text-gray-400 group-hover:text-[#0a0a0a]/80' : 'text-[#6D5D4B] group-hover:text-white/80'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
-                  Telefone
+                  {t.phone}
                 </p>
                 <p className={`transition-colors duration-300 ${darkMode ? 'text-white group-hover:text-[#0a0a0a]' : 'text-[#333333] group-hover:text-white'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
                   (15) 99812-5180
@@ -67,14 +70,14 @@ export function Contact({ darkMode }: ContactProps) {
             style={{ fontFamily: 'Lato, sans-serif' }}
           >
             <Download className="w-5 h-5" />
-            Baixar meu Currículo (.doc)
+            {t.download}
           </button>
         </div>
       </div>
       
       <footer className={`mt-16 pt-8 border-t text-center ${darkMode ? 'border-[#2a2a2a]' : 'border-[#F5F0E6]'}`}>
         <p className={darkMode ? 'text-gray-400' : 'text-[#6D5D4B]'} style={{ fontFamily: 'Lato, sans-serif' }}>
-          © 2026 Matheus Munuera. Todos os direitos reservados.
+          {t.footer}
         </p>
       </footer>
     </section>

@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Languages } from 'lucide-react';
+import { translations, Language } from '../translations';
 
 interface NavbarProps {
   darkMode: boolean;
   toggleDarkMode: () => void;
+  language: Language;
+  toggleLanguage: () => void;
 }
 
-export function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
+export function Navbar({ darkMode, toggleDarkMode, language, toggleLanguage }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
@@ -40,13 +43,13 @@ export function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
   };
 
   const navItems = [
-    { id: 'hero', label: 'Início' },
-    { id: 'sobre', label: 'Sobre' },
-    { id: 'projetos', label: 'Projetos' },
-    { id: 'habilidades', label: 'Habilidades' },
-    { id: 'formacao', label: 'Formação' },
-    { id: 'certificacoes', label: 'Certificações' },
-    { id: 'contato', label: 'Contato' }
+    { id: 'hero', label: translations[language].navbar.home },
+    { id: 'sobre', label: translations[language].navbar.about },
+    { id: 'projetos', label: translations[language].navbar.projects },
+    { id: 'habilidades', label: translations[language].navbar.skills },
+    { id: 'formacao', label: translations[language].navbar.education },
+    { id: 'certificacoes', label: translations[language].navbar.certifications },
+    { id: 'contato', label: translations[language].navbar.contact }
   ];
 
   return (
@@ -90,15 +93,27 @@ export function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
             ))}
           </div>
 
-          <button
-            onClick={toggleDarkMode}
-            className={`p-2 rounded-lg transition-colors duration-300 ${
-              darkMode ? 'bg-[#2a2a2a] text-[#C3A686]' : 'bg-[#F5F0E6] text-[#B99C7A]'
-            }`}
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={toggleLanguage}
+              className={`p-2 rounded-lg transition-colors duration-300 flex items-center gap-2 ${
+                darkMode ? 'bg-[#2a2a2a] text-[#C3A686]' : 'bg-[#F5F0E6] text-[#B99C7A]'
+              }`}
+              aria-label="Toggle language"
+            >
+              <Languages className="w-5 h-5" />
+              <span className="text-sm font-semibold">{language.toUpperCase()}</span>
+            </button>
+            <button
+              onClick={toggleDarkMode}
+              className={`p-2 rounded-lg transition-colors duration-300 ${
+                darkMode ? 'bg-[#2a2a2a] text-[#C3A686]' : 'bg-[#F5F0E6] text-[#B99C7A]'
+              }`}
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </div>
     </nav>
