@@ -20,7 +20,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     title: 'Idiomas',
-    skills: ['Inglês – Avançado', 'Português – Nativo']
+    skills: ['Inglês – Avançado', 'Português – Nativo', 'Espanhol – Intermediário', 'Japonês – Básico']
   }
 ];
 
