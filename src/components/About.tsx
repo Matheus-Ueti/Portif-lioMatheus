@@ -37,7 +37,7 @@ export function About({ darkMode, language }: AboutProps) {
                 <img
                   src={profileImage}
                   alt="Matheus Munuera"
-                  className="w-96 h-96 object-cover rounded-full shadow-xl"
+                  className="w-[28rem] h-[28rem] object-cover rounded-full shadow-xl aspect-square"
                 />
               </div>
             </div>

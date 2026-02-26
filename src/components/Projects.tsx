@@ -15,35 +15,35 @@ const projects: Project[] = [
     title: 'NEXTJOB',
     tags: ['Firebase', 'TypeScript', 'React'],
     descriptionKey: 'nextjob',
-    link: '#',
+    link: 'https://www.linkedin.com/in/matheus-ueti-1721892b7/',
     image: '/src/assets/projects/nextjob.png'
   },
   {
     title: 'EcoSafe',
     tags: ['Firebase', 'TypeScript', 'React', 'Java', 'Spring Boot'],
     descriptionKey: 'ecosafe',
-    link: '#',
+    link: 'https://www.linkedin.com/in/matheus-ueti-1721892b7/',
     image: '/src/assets/projects/ecosafe.png'
   },
   {
     title: 'Zoog (Mottu)',
     tags: ['TypeScript', 'React'],
     descriptionKey: 'zoog',
-    link: '#',
+    link: 'https://www.linkedin.com/in/matheus-ueti-1721892b7/',
     image: '/src/assets/projects/zoog.png'
   },
   {
     title: 'Landing Page - Advogada Izandra',
     tags: ['HTML', 'CSS', 'JavaScript'],
     descriptionKey: 'landing1',
-    link: '#',
+    link: 'https://www.linkedin.com/in/matheus-ueti-1721892b7/',
     image: '/src/assets/projects/advogada-izandra.png'
   },
   {
     title: 'Landing Page - Dr. Caio Munuera Ueti',
     tags: ['HTML', 'CSS', 'JavaScript'],
     descriptionKey: 'landing2',
-    link: '#',
+    link: 'https://www.linkedin.com/in/matheus-ueti-1721892b7/',
     image: '/src/assets/projects/dr-caio.png'
   }
 ];

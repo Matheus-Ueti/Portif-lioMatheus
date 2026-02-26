@@ -24,7 +24,7 @@ export const translations = {
     },
     projects: {
       title: 'Meus Projetos',
-      viewGithub: 'Ver no GitHub',
+      viewGithub: 'Ver no LinkedIn',
       nextjob: 'Aplicativo com IA implementada que ajuda profissionais de TI a receberem feedback detalhado e personalizado do currículo.',
       ecosafe: 'Aplicativo de gerenciamento ambiental focado em monitoramento e controle de práticas sustentáveis.',
       zoog: 'Aplicativo em contribuição com a Mottu para gerenciamento eficiente de motos nos pátios da empresa.',
@@ -86,7 +86,7 @@ export const translations = {
     },
     projects: {
       title: 'My Projects',
-      viewGithub: 'View on GitHub',
+      viewGithub: 'View on LinkedIn',
       nextjob: 'AI-powered application that helps IT professionals receive detailed and personalized resume feedback.',
       ecosafe: 'Environmental management application focused on monitoring and controlling sustainable practices.',
       zoog: 'Application in contribution with Mottu for efficient management of motorcycles in company yards.',
