@@ -5,6 +5,7 @@ export const translations = {
       about: 'Sobre',
       projects: 'Projetos',
       skills: 'Habilidades',
+      experience: 'Experiência',
       education: 'Formação',
       certifications: 'Certificações',
       contact: 'Contato'
@@ -18,8 +19,8 @@ export const translations = {
     },
     about: {
       title: 'Sobre Mim',
-      paragraph1: 'Busco uma oportunidade para aprimorar minhas competências como Desenvolvedor Full Stack Júnior. Sou um profissional proativo, com grande facilidade de aprendizado e excelente comunicação interpessoal.',
-      paragraph2: 'Busco uma posição estável, com preferência por um modelo de trabalho que ofereça flexibilidade.',
+      paragraph1: 'Desenvolvedor Full Stack Júnior na MUNDO365 (Cascavel, remoto), atuando no desenvolvimento de soluções web modernas. Sou um profissional proativo, com grande facilidade de aprendizado e excelente comunicação interpessoal.',
+      paragraph2: 'Atualmente cursando Pós-Graduação em Engenharia e Administração de Banco de Dados pela UNICAMP, aprofundando meu conhecimento em arquitetura e gestão de dados.',
       availability: '✓ Disponibilidade para mudança e trabalho em outros estados'
     },
     projects: {
@@ -40,12 +41,21 @@ export const translations = {
     },
     education: {
       title: 'Formação Acadêmica',
-      degree1: 'Análise e Desenvolvimento de Sistemas',
-      institution1: 'FIAP - Faculdade de Informática e Administração Paulista',
-      period1: 'Fev/2023 - Dez/2025',
-      degree2: 'Ensino Médio Técnico - Informática',
-      institution2: 'ETEC João Belarmino',
-      period2: 'Fev/2019 - Dez/2021'
+      degree1: 'Pós-Graduação em Engenharia e Administração de Banco de Dados',
+      institution1: 'UNICAMP - Universidade Estadual de Campinas',
+      period1: '2025 - Em andamento',
+      degree2: 'Análise e Desenvolvimento de Sistemas',
+      institution2: 'FIAP - Faculdade de Informática e Administração Paulista',
+      period2: 'Fev/2023 - Dez/2025'
+    },
+    experience: {
+      title: 'Experiência',
+      role: 'Desenvolvedor Full Stack Júnior',
+      company: 'MUNDO365 · Cascavel, PR',
+      period: '2025 - Presente',
+      location: 'Remoto',
+      badge: 'Emprego atual',
+      description: 'Desenvolvimento de aplicações web completas, atuando tanto no front-end quanto no back-end. Colaboro com a equipe para entregar soluções modernas, escaláveis e de alta qualidade.'
     },
     certifications: {
       title: 'Certificações',
@@ -67,6 +77,7 @@ export const translations = {
       about: 'About',
       projects: 'Projects',
       skills: 'Skills',
+      experience: 'Experience',
       education: 'Education',
       certifications: 'Certifications',
       contact: 'Contact'
@@ -80,8 +91,8 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      paragraph1: 'I am looking for an opportunity to improve my skills as a Junior Full Stack Developer. I am a proactive professional with great learning ability and excellent interpersonal communication.',
-      paragraph2: 'I am looking for a stable position, preferably with a work model that offers flexibility.',
+      paragraph1: 'Junior Full Stack Developer at MUNDO365 (Cascavel, remote), working on building modern web solutions. I am a proactive professional with great learning ability and excellent interpersonal communication.',
+      paragraph2: 'Currently pursuing a Postgraduate degree in Database Engineering and Administration at UNICAMP, deepening my knowledge in data architecture and management.',
       availability: '✓ Available for relocation and work in other states'
     },
     projects: {
@@ -102,12 +113,21 @@ export const translations = {
     },
     education: {
       title: 'Academic Background',
-      degree1: 'Systems Analysis and Development',
-      institution1: 'FIAP - Faculty of Informatics and Business Administration Paulista',
-      period1: 'Feb/2023 - Dec/2025',
-      degree2: 'Technical High School - Computer Science',
-      institution2: 'ETEC João Belarmino',
-      period2: 'Feb/2019 - Dec/2021'
+      degree1: 'Postgraduate in Database Engineering and Administration',
+      institution1: 'UNICAMP - State University of Campinas',
+      period1: '2025 - In progress',
+      degree2: 'Systems Analysis and Development',
+      institution2: 'FIAP - Faculty of Informatics and Business Administration Paulista',
+      period2: 'Feb/2023 - Dec/2025'
+    },
+    experience: {
+      title: 'Experience',
+      role: 'Junior Full Stack Developer',
+      company: 'MUNDO365 · Cascavel, PR',
+      period: '2025 - Present',
+      location: 'Remote',
+      badge: 'Current job',
+      description: 'Full-stack web application development, working on both front-end and back-end. Collaborating with the team to deliver modern, scalable, and high-quality solutions.'
     },
     certifications: {
       title: 'Certifications',

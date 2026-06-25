@@ -11,6 +11,11 @@ export function Education({ darkMode, language }: EducationProps) {
   const [ref, isVisible] = useScrollAnimation();
   const t = translations[language].education;
 
+  const items = [
+    { degree: t.degree1, institution: t.institution1, period: t.period1 },
+    { degree: t.degree2, institution: t.institution2, period: t.period2 },
+  ];
+
   return (
     <section id="formacao" ref={ref} className={`py-20 px-6 transition-colors duration-300 ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#F5F0E6]'}`}>
       <div className="max-w-6xl mx-auto">
@@ -18,33 +23,38 @@ export function Education({ darkMode, language }: EducationProps) {
           <h2 className={`text-[32px] font-semibold mb-12 text-center ${darkMode ? 'text-[#C3A686]' : 'text-[#6D5D4B]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
             {t.title}
           </h2>
-        
+
           <div className="max-w-3xl mx-auto">
-            <div className={`relative pl-8 pb-8 border-l-2 ${darkMode ? 'border-[#C3A686]' : 'border-[#B99C7A]'}`}>
-              <div className={`absolute left-[-13px] top-0 w-6 h-6 rounded-full flex items-center justify-center ${darkMode ? 'bg-[#C3A686]' : 'bg-[#B99C7A]'}`}>
-                <div className={`w-3 h-3 rounded-full ${darkMode ? 'bg-[#0a0a0a]' : 'bg-white'}`}></div>
-              </div>
-            
-              <div className={`rounded-xl p-6 shadow-md ml-6 ${darkMode ? 'bg-[#2a2a2a]' : 'bg-white'}`}>
-                <div className="flex items-start gap-4">
-                  <div className={`p-3 rounded-lg ${darkMode ? 'bg-[#C3A686]/20' : 'bg-[#F5F0E6]'}`}>
-                    <GraduationCap className={`w-8 h-8 ${darkMode ? 'text-[#C3A686]' : 'text-[#B99C7A]'}`} />
-                  </div>
-                
-                  <div className="flex-1">
-                    <h3 className={`text-xl font-semibold mb-2 ${darkMode ? 'text-white' : 'text-[#333333]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                      {t.degree1}
-                    </h3>
-                    <p className={`font-semibold mb-2 ${darkMode ? 'text-[#C3A686]' : 'text-[#B99C7A]'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
-                      {t.institution1}
-                    </p>
-                    <p className={darkMode ? 'text-gray-300' : 'text-[#333333]'} style={{ fontFamily: 'Lato, sans-serif' }}>
-                      {t.period1}
-                    </p>
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className={`relative pl-8 pb-8 border-l-2 ${darkMode ? 'border-[#C3A686]' : 'border-[#B99C7A]'} ${index === items.length - 1 ? 'border-l-0' : ''}`}
+              >
+                <div className={`absolute left-[-13px] top-0 w-6 h-6 rounded-full flex items-center justify-center ${darkMode ? 'bg-[#C3A686]' : 'bg-[#B99C7A]'}`}>
+                  <div className={`w-3 h-3 rounded-full ${darkMode ? 'bg-[#0a0a0a]' : 'bg-white'}`}></div>
+                </div>
+
+                <div className={`rounded-xl p-6 shadow-md ml-6 ${darkMode ? 'bg-[#2a2a2a]' : 'bg-white'}`}>
+                  <div className="flex items-start gap-4">
+                    <div className={`p-3 rounded-lg ${darkMode ? 'bg-[#C3A686]/20' : 'bg-[#F5F0E6]'}`}>
+                      <GraduationCap className={`w-8 h-8 ${darkMode ? 'text-[#C3A686]' : 'text-[#B99C7A]'}`} />
+                    </div>
+
+                    <div className="flex-1">
+                      <h3 className={`text-xl font-semibold mb-2 ${darkMode ? 'text-white' : 'text-[#333333]'}`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                        {item.degree}
+                      </h3>
+                      <p className={`font-semibold mb-2 ${darkMode ? 'text-[#C3A686]' : 'text-[#B99C7A]'}`} style={{ fontFamily: 'Lato, sans-serif' }}>
+                        {item.institution}
+                      </p>
+                      <p className={darkMode ? 'text-gray-300' : 'text-[#333333]'} style={{ fontFamily: 'Lato, sans-serif' }}>
+                        {item.period}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

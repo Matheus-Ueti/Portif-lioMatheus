@@ -18,7 +18,7 @@ export function Navbar({ darkMode, toggleDarkMode, language, toggleLanguage }: N
       setIsScrolled(window.scrollY > 50);
 
       // Detectar seção ativa
-      const sections = ['hero', 'sobre', 'projetos', 'habilidades', 'formacao', 'certificacoes', 'contato'];
+      const sections = ['hero', 'sobre', 'projetos', 'habilidades', 'experiencia', 'formacao', 'certificacoes', 'contato'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -47,6 +47,7 @@ export function Navbar({ darkMode, toggleDarkMode, language, toggleLanguage }: N
     { id: 'sobre', label: translations[language].navbar.about },
     { id: 'projetos', label: translations[language].navbar.projects },
     { id: 'habilidades', label: translations[language].navbar.skills },
+    { id: 'experiencia', label: translations[language].navbar.experience },
     { id: 'formacao', label: translations[language].navbar.education },
     { id: 'certificacoes', label: translations[language].navbar.certifications },
     { id: 'contato', label: translations[language].navbar.contact }
